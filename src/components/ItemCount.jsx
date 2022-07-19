@@ -24,6 +24,8 @@ function ItemCount(props) {
           setCount(count - unit) 
         } 
         break;
+        default:
+          break
     }
   
     
@@ -32,7 +34,7 @@ function ItemCount(props) {
   return (
     <div className='ic-container'>
         <div className='ic-title'>
-            <h2>Buy your items</h2>
+            <h2>Select Amount</h2>
         </div>
         <div className='ic-body'>
           <div className='counter'>

@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import ItemCount from './ItemCount' 
 import ItemList from './ItemList';
 
 
 function ItemListContainer(props) {
-    let itemsDatabase = []
+    // let itemsDatabase = []
     const [items, setItems] = useState([]);
-    console.log(items)
+   
 
     useEffect(
         () => {
@@ -15,11 +14,9 @@ function ItemListContainer(props) {
                 resolve(
     
                     fetch('https://fakestoreapi.com/products')
-                    // fetch('https://api.storerestapi.com/products')
                     .then(res => res.json())
-                    .then(json => itemsDatabase = [...json])
-                    // .then(json => itemsDatabase = json['data'])
-                    // .then(data => console.log(data))
+                    // .then(json => itemsDatabase = [...json])
+
                 )
                    
             }, 1000);
@@ -36,11 +33,6 @@ function ItemListContainer(props) {
     }, [])
     
 
-   
-    
-
-
-
     // Function to collect data
   return (
     <>
@@ -50,8 +42,6 @@ function ItemListContainer(props) {
         <ItemList data={items}/>
     </div>
     
-    {/* <ItemCount stock={5} initial={1} unit={1}/>
-    <ItemCount stock={50} initial={5} unit={5}/> */}
     </>
     
   )

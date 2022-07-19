@@ -2,13 +2,14 @@
 import React from 'react'
 
 import Header from './components/Header'
-import ItemListContainer from './components/ItemListContainer'
+// import ItemListContainer from './components/ItemListContainer'
+import ItemDetailContainer from './components/ItemDetailContainer'
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <ItemListContainer greeting="Welcome to LaizzesFaire.com" />
+      <ItemDetailContainer />
     </div>
   )
 }

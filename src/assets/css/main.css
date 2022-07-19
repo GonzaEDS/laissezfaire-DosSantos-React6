@@ -149,15 +149,13 @@ input:checked ~ .lf-navbar ul {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  margin: 2rem auto;
   background: hsl(0deg, 0%, 98%);
   width: 18rem;
-  height: 11rem;
-  padding: 1rem;
+  height: 8rem;
 }
 
 .ic-title {
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   color: #36374b;
 }
@@ -177,6 +175,11 @@ input:checked ~ .lf-navbar ul {
   font-size: 1.8rem;
   align-items: center;
   font-weight: 700;
+}
+
+.counter span {
+  width: 2rem;
+  text-align: center;
 }
 
 .count-btn {
@@ -319,6 +322,228 @@ button.buy-btn {
   color: #ffffff;
   text-shadow: 0px 0px 5px #3d3f6a;
   text-shadow: -1px -1px 0 #915e00, 1px -1px 0 #915e00, -1px 1px 0 #915e00, 1px 1px 0 #915e00;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  padding: 1rem;
+}
+
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  max-width: 55rem;
+  height: auto;
+  gap: 2rem;
+  background-color: #fafafa;
+  padding-top: 3rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.detail-image {
+  height: 15rem;
+}
+
+img {
+  height: 100%;
+}
+
+.detail-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  justify-content: center;
+  width: 80%;
+  gap: 1rem;
+}
+
+.detail-title {
+  font-size: 1.4rem;
+  color: #36374b;
+}
+.detail-title h3 {
+  text-align: center;
+}
+
+.detail-price {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.detail-price p::before {
+  content: "$";
+}
+
+.detail-description {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 800px) {
+  .detail-container {
+    padding: 2rem 3rem;
+  }
+
+  .product-detail {
+    flex-direction: row;
+    padding: 3rem;
+  }
+
+  .detail-body {
+    width: 61%;
+    gap: 0.75rem;
+  }
+}
+/*!
+ * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Licensed under MIT
+ */
+.la-ball-clip-rotate,
+.la-ball-clip-rotate > div {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.la-ball-clip-rotate {
+  display: block;
+  font-size: 0;
+  color: #f3ab26;
+}
+
+.la-ball-clip-rotate.la-dark {
+  color: #333;
+}
+
+.la-ball-clip-rotate > div {
+  display: inline-block;
+  float: none;
+  background-color: currentColor;
+  border: 0 solid currentColor;
+}
+
+.la-ball-clip-rotate {
+  width: calc(60px + 1vw);
+  height: calc(60px + 1vw);
+}
+
+.la-ball-clip-rotate > div {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border-width: 2px;
+  border-bottom-color: transparent;
+  border-radius: 100%;
+  -webkit-animation: ball-clip-rotate 0.75s linear infinite;
+  -moz-animation: ball-clip-rotate 0.75s linear infinite;
+  -o-animation: ball-clip-rotate 0.75s linear infinite;
+  animation: ball-clip-rotate 0.5s linear infinite;
+}
+
+.la-ball-clip-rotate.la-sm {
+  width: 16px;
+  height: 16px;
+}
+
+.la-ball-clip-rotate.la-sm > div {
+  width: 16px;
+  height: 16px;
+  border-width: 1px;
+}
+
+.la-ball-clip-rotate.la-2x {
+  width: calc(64px + 5vw);
+  height: calc(64px + 5vw);
+}
+
+.la-ball-clip-rotate.la-2x > div {
+  width: calc(64px + 3vw);
+  height: calc(64px + 3vw);
+  border-width: 9px;
+}
+
+.la-ball-clip-rotate.la-3x {
+  width: 96px;
+  height: 96px;
+}
+
+.la-ball-clip-rotate.la-3x > div {
+  width: 96px;
+  height: 96px;
+  border-width: 6px;
+}
+
+/*
+ * Animation
+ */
+@-webkit-keyframes ball-clip-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes ball-clip-rotate {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes ball-clip-rotate {
+  0% {
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes ball-clip-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
